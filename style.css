@@ -1,56 +1,31 @@
-/* common style */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat&family=Poppins&display=swap');
+/* common styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat&family=Poppins:wght@400;500&display=swap');
 
 body{
     font-family: 'Poppins', sans-serif;
 }
 
-/* navbar styles */
-.navbar{
-    z-index: 3;
+/* carousel section styles */
+.carousel-item img{
+    width: 100%;
+    height: 92vh;
 }
-.navbar-brand{
-    font-size: 22px;
-    font-weight: bold;
+.overlay::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.486);
+    background-blend-mode: multiply;
+    z-index: 1;
 }
-.nav-item{
-    font-size: 16px;
-    font-weight: 600;
-}
-
-/* slider styles */
-.carousel-indicators [data-bs-target]{
-    width: 50px;
+.carousel-indicators [data-bs-target] {
+    width: 40px;
 }
 .carousel-indicators .active{
     width: 15%;
-}
-.carousel-item img{
-    width: 100%;
-    height: 90vh;
-    position: relative;
-}
-.carousel-caption{
-    z-index: 1;
-}
-.title{
-    font-size: 48px;
-    font-weight: 600;
-}
-.description{
-    font-size: 16px;
-    font-weight: lighter;
-}
-.overlay::before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
-    z-index: 1;  
 }
 .carousel-control-prev-icon{
     width: 50px;
@@ -60,290 +35,15 @@ body{
     width: 50px;
     height: 50px;
 }
-
-/* blog styles */
-.blog-title{
-    font-size: 40px;
-    font-weight: bolder;
-    color: black;
+.carousel-caption{
+    z-index: 2;
 }
-.blog-description{
-    font-size: 16px;
-    font-weight: lighter;
+/* toast styles */
+.top-toast{
+    top: 36%;
+    left: 75%;
 }
-.blog.btn{
-    font-size: 16px ;
-}
-.toast:not(.show){
-    display: block;
-    position: relative;
-    left: 400px;
-    top: -170px;
-}
-
-/* package styles */
-.pac-title{
-    font-size: 38px;
-    font-weight: bolder;
-    color: black;
-}
-.card-title{
-    font-size: 36px;
-    font-weight: bolder;
-}
-.card-title2{
-    font-size: 24px;
-    font-weight: bolder;
-}
-.card-text{
-    font-size: 15px;
-    font-weight: lighter;
-    color: #848199;
-}
-.fa-check{
+/* package section styles */
+.fa-solid{
     font-size: 12px;
-    color: #5243C2;
-    background-color: #d8d8d8;
-    padding: 2px;
-    border-radius: 5px;
-}
-
-/* testimonial styles */
-.test-title{
-    font-size: 38px;
-    font-weight: bolder;
-    color: black;
-}
-.test-card-text{
-    font-size: 16px;
-    font-weight: lighter;
-    color: #848199;
-}
-.test-card-title{
-    font-size: 16px;
-    font-weight: bolder;
-    color: black;
-}
-.occupation{
-    font-size: 14px;
-    font-weight: lighter;
-    color: #848199;
-}
-/* faq styles */
-.faq-title{
-    font-size: 38px;
-    font-weight: bolder;
-    color: black;
-}
-/* accordion styles */
-.accordion{
-    z-index: 0;
-}
-.text{
-    font-size: 16px;
-    color: #848199;
-}
-
-/* footer styles */
-.foot{
-    background-color: #0B0D17;
-}
-.copy-text{
-    font-size: 14px;
-    font-weight: lighter;
-    color: #D9DBE1;
-}
-.foot-title{
-    font-size: 18px;
-    font-weight: 500;
-    color: #D9DBE1;
-}
-
-/* responsive css */
-/* for tablet device */
-@media (min-width: 767.99px) and (max-width: 991.99px) {
-    .carousel-item img{
-        height: 60vh;
-    }
-    .carousel-indicators [data-bs-target] {
-        width: 15px;
-    }
-    .carousel-indicators .active {
-        width: 10%;
-    }
-    .title {
-    font-size: 30px;
-    font-weight: 600;
-    }
-    .carousel-control-prev-icon {
-        width: 30px;
-        height: 30px;
-    }
-    
-    .carousel-control-next-icon {
-        width: 30px;
-        height: 30px;
-    }
-    /* blog styles */
-    .blog-title {
-        font-size: 24px;
-        font-weight: bolder;
-        color: black;
-    }
-    .blog-description {
-        font-size: 14px;
-        font-weight: lighter;
-    }
-    .toast:not(.show) {
-        display: block;
-        position: relative;
-        left: 0px;
-        top: -250px;
-    }
-    .pac-title {
-        font-size: 30px;
-        font-weight: bolder;
-        color: black;
-    }
-    .card-title {
-        font-size: 28px;
-        font-weight: bolder;
-    }
-    .card-title2 {
-        font-size: 24px;
-        font-weight: bolder;
-    }
-
-    /* testimonial styles */
-    .test-title{
-        font-size: 30px;
-        font-weight: bolder;
-        color: black;
-    }
-
-    /* faq styles */
-    .faq-title{
-        font-size: 30px;
-        font-weight: bolder;
-        color: black;
-    }
-
-}
-
-/* responsive for mobile device */
-@media only screen and (max-width:767.5px) {
-    /* navbar styles */
-    .nav-con{
-        margin: 0 !important;
-    }
-    .navbar-brand{
-        font-size: 18px;
-    }
-    .carousel-item img {
-        height: 40vh;
-    }
-    .d-none{
-        display: block !important;
-    }
-    .title{
-        font-size: 18px;
-        font-weight: lighter;
-    }
-    .description{
-        display: none;
-    }
-    .carousel-indicators [data-bs-target] {
-        width: 10px;
-    }
-    
-    .carousel-indicators .active {
-        width: 10%;
-    }
-    .carousel-control-prev-icon {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .carousel-control-next-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .carousel-caption .btn{
-        font-size: 12px;
-    }
-
-    /* blog section styles */
-    .blog{
-        flex-direction: column-reverse;
-        padding: 10px;
-        margin: 0;
-    }
-    .blog-part{
-        width: 100% !important;
-    }
-    .toast:not(.show) {
-        display: block;
-        position: relative;
-        left: 0px;
-        top: -220px;
-    }
-    .blog-title{
-        font-size: 24px;
-    }
-    .blog-description{
-        font-size: 14px;
-    }
-    .blog-btn{
-        font-size: 14px;
-    }
-
-    /* package section styles */
-    .pac-title{
-        font-size: 28px;
-    }
-    .card-m{
-        margin: 10px;
-    }
-    .card-title{
-        font-size: 24px;
-    }
-    .card-title2{
-        font-size: 20px;
-    }
-    .card-text{
-        font-size: 14px;
-    }
-
-    /* testimonial section styles */
-    .test-title{
-        font-size: 28px;
-    }
-    .test-card-text{
-        font-size: 14px;
-    }
-
-    /* faq section styles */
-    .faq-title{
-        font-size: 28px;
-    }
-    .faq{
-        flex-direction: column-reverse;
-        padding: 10px;
-        margin: 0;
-    }
-    .faq-part{
-        width: 100% !important;
-    }
-
-    /* footer section styles */
-    .foot{
-        text-align: center;
-    }
-    .feet{
-        flex-direction: column-reverse;
-    }
-    .feet-part{
-        width: 100% !important;
-        margin: 0!important;
-    }
 }
