@@ -1,8 +1,9 @@
 /* common styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat&family=Poppins:wght@400;500&display=swap');
 
-body{
+html,body{
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden!important;
 }
 
 /* carousel section styles */
@@ -10,12 +11,16 @@ body{
     width: 100%;
     height: 92vh;
 }
+.hero-section{
+    position: relative;
+}
 .overlay::before{
-    content: "";
+    content: " ";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    max-width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.486);
     background-blend-mode: multiply;
@@ -41,9 +46,46 @@ body{
 /* toast styles */
 .top-toast{
     top: 36%;
-    left: 75%;
+    right: 0;
 }
 /* package section styles */
 .fa-solid{
     font-size: 12px;
 }
+
+/* responsive styles */
+
+/* responsive styles for mobile device */
+@media (max-width: 767.5px) {
+    .carousel-item img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .r-text {
+        font-size: 20px !important;
+        font-weight: 500 !important;
+    }
+
+    /* toast styles */
+    .top-toast {
+        top: 15%;
+        right: 7.5%;
+    }
+
+}
+
+/* responsive syles for tablet device */
+@media (min-width: 767.9px) and (max-width: 991.9px) {
+    .carousel-item img{
+        width: 100%;
+        height: 50vh;
+    } 
+
+    /* toast styles */
+    .top-toast {
+        top: 20%;
+        left: 0;
+    }
+}
+
